@@ -16,11 +16,12 @@ fn main() {
 	println(tail.tail([1,2,3,4,5]))
 	println(head.head([1,2,3,4,5]))
 	println(last.last([1,2,3,4,5]))
+	println(reverse_list.reverse_list([1,2,3,4,5]))
 
 	sum_fn := fn (n int, n2 int) int {
 		return n+n2
 	}
 
 	println(zip.with(sum_fn, [1,2,3,4,5], [1,2,3,4,5]))
-
+	println(zip.zip([1,2,3,4,5], [1,2,3,4,5]))
 }
