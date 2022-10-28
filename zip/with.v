@@ -1,9 +1,10 @@
 module zip
 
-import arrays
+import math
 
 pub fn zip<T>(ls1 []T, ls2 []T) [][]T {
-	return arrays.chunk(arrays.merge(ls1, ls2), 2)
+	total := math.min(ls1.len, ls2.len)
+	return [][]T{len: total, init: [ls1[it], ls2[it]]}  
 }
 
 pub fn with<T>(func fn (v1 T, v2 T) T, ls1 []T, ls2 []T) []T {
@@ -15,7 +16,7 @@ pub fn with<T>(func fn (v1 T, v2 T) T, ls1 []T, ls2 []T) []T {
 		return func(v1, v2)
 	}
 
-	results := []T{len: zipped_lists.len, init: op(zipped_lists[0 + it], func)}
+	results := []T{len: zipped_lists.len, init: op(zipped_lists[it], func)}
 
 	return results
 }
