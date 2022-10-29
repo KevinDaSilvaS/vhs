@@ -67,9 +67,9 @@ To use a function just type:
      println(vhsmod.tail([])) // []
     ```
 ### Reverse a list
- ```
-    println(vhsmod.reverse_list([1,2,3])) // [3,2,1]
- ```
+```
+ println(vhsmod.reverse_list([1,2,3])) // [3,2,1]
+```
  ```
     println(vhsmod.reverse_list([])) // []
  ```
