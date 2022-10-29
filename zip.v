@@ -1,4 +1,4 @@
-module zip
+module vhs
 
 import math
 
