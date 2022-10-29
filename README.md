@@ -57,3 +57,21 @@ To use a function just type:
     ```
      println(vhsmod.init([])) // []
     ```
+    
+   - #### Tail - returns all the elements of a list except by the first one
+    ```
+     println(vhsmod.tail([1,2,3])) // [2, 3]
+    ```
+    
+    ```
+     println(vhsmod.tail([])) // []
+    ```
+### Reverse a list
+ ```
+    println(vhsmod.reverse_list([1,2,3])) // [3,2,1]
+ ```
+ ```
+    println(vhsmod.reverse_list([])) // []
+ ```
+
+ 
