@@ -11,7 +11,7 @@ pub fn take<T>(amount int, ls []T) []T {
 
 pub fn drop<T>(amount int, ls []T) []T {
 	arr_size := ls.len
-	if amount >= arr_size-1 {
+	if amount >= arr_size {
 		return []
 	}
 	
