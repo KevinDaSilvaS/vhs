@@ -92,7 +92,7 @@ To use a function just type:
      println(vhsmod.init([])) // []
     ```
     
-   - #### Tail - returns all the elements of a list except by the first one
+  - #### Tail - returns all the elements of a list except by the first one
     ```
      println(vhsmod.tail([1,2,3])) // [2, 3]
     ```
