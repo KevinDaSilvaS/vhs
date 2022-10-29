@@ -49,7 +49,7 @@ To use a function just type:
     ```
      println(vhsmod.last([])) // panics the list should have a length of at least one element
     ```
-  - #### init - returns all the elements of a list except by the last one
+  - #### Init - returns all the elements of a list except by the last one
     ```
      println(vhsmod.init([1,2,3])) // [1, 2]
     ```
