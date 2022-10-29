@@ -25,11 +25,35 @@ To use a function just type:
     ```
      println(vhsmod.take(5, [1,2,3])) // [1,2,3]
     ```
-  - #### Drop - drops the first  n elements of a list
+  - #### Drop - drops the first n elements of a list
     ```
      println(vhsmod.drop(2, [1,2,3])) // [3]
     ```
     
     ```
      println(vhsmod.drop(5, [1,2,3])) // []
+    ```
+  - #### Head - returns the first element of a list
+    ```
+     println(vhsmod.head([1,2,3])) // [1]
+    ```
+    
+    ```
+     println(vhsmod.head([])) // panics the list should have a length of at least one element
+    ```
+  - #### Last - returns the last element of a list
+    ```
+     println(vhsmod.last([1,2,3])) // [3]
+    ```
+    
+    ```
+     println(vhsmod.last([])) // panics the list should have a length of at least one element
+    ```
+  - #### init - returns all the elements of a list except by the last one
+    ```
+     println(vhsmod.init([1,2,3])) // [1, 2]
+    ```
+    
+    ```
+     println(vhsmod.init([])) // []
     ```
