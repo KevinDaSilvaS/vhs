@@ -68,10 +68,10 @@ To use a function just type:
     ```
 ### Reverse a list
 ```
- println(vhsmod.reverse_list([1,2,3])) // [3,2,1]
+   println(vhsmod.reverse_list([1,2,3])) // [3,2,1]
 ```
- ```
-    println(vhsmod.reverse_list([])) // []
- ```
+```
+   println(vhsmod.reverse_list([])) // []
+```
 
  
