@@ -44,7 +44,7 @@ To use a function just type:
     ```
     a point to overview is that the return type of the function should be equal to the parameters the example below will cause an error:
     ```
-      conc_fn := fn (v1 int, v2 int) string {
+     conc_fn := fn (v1 int, v2 int) string {
         return '$v1 <-> $v2'
      }
      println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) // panics, with functions expects two T types as parameters and expects to return a T type result if two integers are passed V expects the return value to be integer 
