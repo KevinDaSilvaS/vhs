@@ -69,7 +69,7 @@ To use a function just type:
     ```
   - #### Head - returns the first element of a list
     ```
-     println(vhsmod.head([1,2,3])) // [1]
+     println(vhsmod.head([1,2,3])) // 1
     ```
     
     ```
@@ -77,7 +77,7 @@ To use a function just type:
     ```
   - #### Last - returns the last element of a list
     ```
-     println(vhsmod.last([1,2,3])) // [3]
+     println(vhsmod.last([1,2,3])) // 3
     ```
     
     ```
