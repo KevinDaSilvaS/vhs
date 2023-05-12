@@ -13,9 +13,6 @@ pub fn zip<T, V>(ls1 []T, ls2 []V) []Tuple<T, V> {
 }
 
 pub fn zip_with<T, V, U>(func fn (v1 T, v2 V) U, ls1 []T, ls2 []V) []U {
-	zipped_lists := zip(ls1, ls2)
-
-	results := []U{len: zipped_lists.len, init: func(zipped_lists[it].x, zipped_lists[it].y)}
-
-	return results
+	total := math.min(ls1.len, ls2.len)
+	return []U{len: total, init: func(ls1[it], ls2[it])}
 }
