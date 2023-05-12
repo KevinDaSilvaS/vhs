@@ -79,7 +79,7 @@ To use a function just type:
      conc_fn := fn (v1 int, v2 int) string {
         return '$v1 <-> $v2'
      }
-     println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) ['4 <-> 1', '5 <-> 2', '6 <-> 3']
+     println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) // ['4 <-> 1', '5 <-> 2', '6 <-> 3']
     ```
 
 ### List methods
