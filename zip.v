@@ -2,21 +2,20 @@ module vhs
 
 import math
 
-pub fn zip<T>(ls1 []T, ls2 []T) [][]T {
-	total := math.min(ls1.len, ls2.len)
-	return [][]T{len: total, init: [ls1[it], ls2[it]]}  
+pub struct Tuple<T, V> {
+   x T
+   y V
 }
 
-pub fn with<T>(func fn (v1 T, v2 T) T, ls1 []T, ls2 []T) []T {
+pub fn zip<T, V>(ls1 []T, ls2 []V) []Tuple<T, V> { 
+    total := math.min(ls1.len, ls2.len)
+    return []Tuple<T, V>{len: total, init: Tuple<T, V>{x: ls1[it], y: ls2[it]}}
+}
+
+pub fn zip_with<T, V, U>(func fn (v1 T, v2 V) U, ls1 []T, ls2 []V) []U {
 	zipped_lists := zip(ls1, ls2)
 
-	op := fn <T>(v []T, func fn (v1 T, v2 T) T) T {
-		v1 := v[0]
-		v2 := v[1]
-		return func(v1, v2)
-	}
-
-	results := []T{len: zipped_lists.len, init: op(zipped_lists[it], func)}
+	results := []U{len: zipped_lists.len, init: func(zipped_lists[it].x, zipped_lists[it].y)}
 
 	return results
 }
