@@ -26,28 +26,60 @@ To use a function just type:
 
 
 ### Zips
+ - ### For the zip function a new struct was created to store the two distinct elements:
+  	```
+    pub struct Tuple<T, V> {
+      pub:
+        x T
+        y V
+    }
+    ``` 
+
  - #### Zip - zips two lists in pairs of twos
     ```
-     println(vhsmod.zip([2, 5], [1,2,3])) // [[2,1], [5,2]]
+     println(vhsmod.zip([4,5,6], [false,true]))
+     
+     /*
+     Returns
+     [vhs.Tuple[int, bool]{
+          x: 4
+          y: false
+      }, vhs.Tuple[int, bool]{
+          x: 5
+          y: true
+      }]
+     */
     ```
     
     ```
-      println(vhsmod.zip([2, 5, 10], [1,2,3])) // [[2,1], [5,2], [10, 3]]
+      println(vhsmod.zip([2, 5, 10], [1,2,3])) 
+      /*
+     Returns
+     [vhs.Tuple[int, int]{
+          x: 2
+          y: 1
+      }, vhs.Tuple[int, int]{
+          x: 5
+          y: 2
+      }, vhs.Tuple[int, int]{
+          x: 10
+          y: 3
+      }]
+     */
     ```
     
-  - #### With - calls zip on two lists and apply a function on the pair
+  - #### Zip With - receives a function and two lists and apply a function on both lists return a third list
     ```
      sum_fn := fn (v1 int, v2 int) int {
         return v1+v2
      }
      println(vhsmod.with(sum_fn, [4,5,6], [1,2,3])) // [5, 7, 9]
     ```
-    a point to overview is that the return type of the function should be equal to the parameters the example below will cause an error:
     ```
      conc_fn := fn (v1 int, v2 int) string {
         return '$v1 <-> $v2'
      }
-     println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) // panics, with functions expects two T types as parameters and expects to return a T type result if two integers are passed V expects the return value to be integer 
+     println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) ['4 <-> 1', '5 <-> 2', '6 <-> 3']
     ```
 
 ### List methods
