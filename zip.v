@@ -3,8 +3,9 @@ module vhs
 import math
 
 pub struct Tuple<T, V> {
-   pub x: T
-   pub y: V
+	pub:
+		x T
+   		y V
 }
 
 pub fn zip<T, V>(ls1 []T, ls2 []V) []Tuple<T, V> { 
