@@ -6,7 +6,7 @@ pub fn take<T>(amount int, ls []T) []T {
 		return ls 
 	}
 	
-	return []T{len: amount, init: ls[0 + it]}
+	return []T{len: amount, init: ls[0 + index]}
 }
 
 pub fn drop<T>(amount int, ls []T) []T {
@@ -15,7 +15,7 @@ pub fn drop<T>(amount int, ls []T) []T {
 		return []
 	}
 	
-	return []T{len: arr_size-amount, init: ls[it+amount]}
+	return []T{len: arr_size-amount, init: ls[index+amount]}
 }
 
 pub fn head<T>(ls []T) T {
