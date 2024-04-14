@@ -73,13 +73,13 @@ To use a function just type:
      sum_fn := fn (v1 int, v2 int) int {
         return v1+v2
      }
-     println(vhsmod.with(sum_fn, [4,5,6], [1,2,3])) // [5, 7, 9]
+     println(vhsmod.zip_with(sum_fn, [4,5,6], [1,2,3])) // [5, 7, 9]
     ```
     ```
      conc_fn := fn (v1 int, v2 int) string {
         return '$v1 <-> $v2'
      }
-     println(vhsmod.with(conc_fn, [4,5,6], [1,2,3])) // ['4 <-> 1', '5 <-> 2', '6 <-> 3']
+     println(vhsmod.zip_with(conc_fn, [4,5,6], [1,2,3])) // ['4 <-> 1', '5 <-> 2', '6 <-> 3']
     ```
 
 ### List methods
